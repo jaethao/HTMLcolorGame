@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+h1, h2, h3, h4 {
+  font-family: 'Rammetto One', cursive;
+}
+
+header {
+  background-color: DarkCyan;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+}
+
+section {
+  background-color: white;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+body {
+  background-color: white;
+}
+
+#square {
+  height: 600px;
+  background-color: gray;
+}
+
+footer {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
