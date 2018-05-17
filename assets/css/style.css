@@ -6,6 +6,15 @@
   border: 1px solid black;
 }
 
+.modal-content {
+  background-color: tomato;
+  color: white;
+}
+
+.tomato {
+  color: tomato;
+}
+
 h1, h2, h3, h4 {
   font-family: 'Slabo 27px', serif;
 }
@@ -42,4 +51,12 @@ footer p {
 
 #mode h5{
   padding-right: .5em;
+}
+
+#rulesNav, #restart, #easyMode, #hardMode {
+  cursor: pointer;
+}
+
+#rulesNav:hover, #restart:hover, #easyMode:hover, #hardMode:hover {
+  color: tomato;
 }
