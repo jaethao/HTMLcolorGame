@@ -1,17 +1,27 @@
 @charset "UTF-8";
 
+.square {
+  width: none;
+  height: 250px;
+  background-color: gray;
+}
+
 h1, h2, h3, h4 {
-  font-family: 'Rammetto One', cursive;
+  font-family: 'Slabo 27px', serif;
 }
 
 header {
-  background-color: DarkCyan;
+  background-color: silver;
   padding-top: 2em;
   padding-bottom: 2em;
-  color: white;
+  color: black;
 }
 
-section {
+header h1 {
+  font-size: 4em;
+}
+
+nav {
   background-color: white;
   padding-top: .5em;
   padding-bottom: .5em;
@@ -21,12 +31,15 @@ body {
   background-color: white;
 }
 
-#square {
-  height: 600px;
-  background-color: gray;
-}
-
 footer {
   padding-top: .5em;
   padding-bottom: .5em;
+}
+
+footer p {
+  padding-top: .25em;
+}
+
+#mode h5{
+  padding-right: .5em;
 }

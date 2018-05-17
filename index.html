@@ -10,57 +10,55 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
-    <title>The Great RGB Game</title>
+
+    <title>HTML Color Game</title>
   </head>
   <body>
     <header>
       <div class="container">
-        <h2 class="text-center">The Great</h2>
-        <h1 class="text-center">RGB <em id="color">(0, 0, 255)</em></h1>
-        <h2 class="text-center">Guessing Game</h2>
+        <h2 class="text-center">Guess that HTML color!</h2>
+        <h1 class="text-center"><em id="color">navy</em></h1>
       </div>
     </header>
-    <section>
+    <nav>
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <h5>New Colors</h5>
+          <div class="col-sm-4">
+            <h5>Rules</h5>
           </div>
-          <div class="col-md-4">
-            <h5 id="message">What color is this?</h5>
+          <div class="col-sm-4">
+            <h5 id="restart">Restart</h5>
           </div>
-        <div class="col-md-4">
-          <div class="row">
-            <div class="col-xs-4"><h5 id="easyMode">Easy</h5></div>
-            <div class="col-xs-4"><h5>|</h5></div>
-            <div class="col-xs-4"><h5 id="hardMode">Hard</h5></div>
+        <div class="col-sm-4">
+          <div class="row" id="mode">
+            <div class="col-xs-3"><h5>Mode:</h5></div>
+            <div class="col-xs-3"><h5 id="easyMode"> Easy</h5></div>
+            <div class="col-xs-3"><h5>|</h5></div>
+            <div class="col-xs-3"><h5 id="hardMode">Hard</h5></div>
           </div>
         </div>
         </div>
       </div>
-    </section>
+    </nav>
 
     <div id="game">
       <div class="row">
-        <div class="col-md-2" id="square">
+        <div class="col-lg-12 square">
         </div>
-        <div class="col-md-2" id="square">
+        <div class="col-lg-12 square">
         </div>
-        <div class="col-md-2" id="square">
+        <div class="col-lg-12 square">
         </div>
-        <div class="col-md-2" id="square">
+        <div class="col-lg-12 square">
         </div>
-        <div class="col-md-2" id="square">
-        </div>
-        <div class="col-md-2" id="square">
+        <div class="col-lg-12 square">
         </div>
       </div>
     </div>
-
     <footer>
-      <p class="text-center" id="copyRight">Maiyer Thao  2018</p>
+      <p class="text-center">Maiyer Thao  2018</p>
     </footer>
 
 
