@@ -11,82 +11,107 @@ $(document).ready(function(){
   var losses = 0;
   var time = 30;
 
-  colorGame = [
-      {color: "azure",
-      answers: ["aliceblue", "azure", "cornsilk", "floralwhite"],
-      correct: 1
-    },{
-      color: "light sea green",
-      answers: ["aquamarine", "cyan", "lightseagreen", "mediumturquoise"],
-      correct: 2
-    },{
-      color: "peach puff",
-      answers: ["salmon", "pink", "mistyrose", "peachpuff"],
-      correct: 3
-    },{
-      color: "navajo white",
-      answers: ["antiquewhite", "bisque", "blanchedalmond", "navajowhite"],
-      correct: 3
-    },{
-      color: "steel blue",
-      answers: ["cadetblue", "darkslategray", "steelblue", "teal"],
-      correct: 2
-    },{
-      color: "fire brick",
-      answers: ["crimson", "darkred", "indianred", "firebrick"],
-      correct: 3
-    },{
-      color: "lawn green",
-      answers: ["lawngreen", "yellowgreen", "springgreen", "chartreuse"],
-      correct: 0
-    },{
-      color: "dark orchid",
-      answers: ["blueviolet", "darkorchid", "darkviolet", "rebeccapurple"],
-      correct: 1
-    },{
-      color: "hot pink",
-      answers: ["deeppink", "fuchsia", "hotpink", "magenta"],
-      correct: 2
-    },{
-      color: "papaya whip",
-      answers: ["papayawhip", "gold", "khaki", "goldenrod"],
-      correct: 0
-    },{
-      color: "tomato",
-      answers: ["coral", "orangered", "tomato", "orange"],
-      correct: 2
-    },{
-      color: "thistle",
-      answers: ["plum", "thistle", "lightpink", "palevioletred"],
-      correct: 1
-    },{
-      color: "light grey",
-      answers: ["silver", "gainsboro", "lavender", "lightgrey"],
-      correct: 3
-    },{
-      color: "navy",
-      answers: ["midnightblue", "darkblue", "navy", "indigo"],
-      correct: 2
-    },{
-      color: "sandy brown",
-      answers: ["wheat", "sandybrown", "rosybrown", "peru"],
-      correct: 1
-    },{
-      color: "dodger blue",
-      answers: ["steelblue", "cornflowerblue", "royalblue", "dodgerblue"],
-      correct: 3
-    },{
-      color: "linen",
-      answers: ["linen", "honeydew", "ivory", "mintcream"],
-      correct: 0
-    },{
-      color: "grey",
-      answers: ["cadetblue", "slategrey", "gray", "dimgray"],
-      correct: 2
-    },{
-      color: "chocolate",
-      answers: ["brown", "chocolate", "sienna", "saddlebrown"],
-      correct: 1
-    }];
+//colors stored in an array
+  var colors = [
+    "aliceBlue",
+    "azure",
+    "cornsilk",
+    "floralWhite",
+    "ghostWhite",
+    "aquamarine",
+    "cyan",
+    "lightSeaGreen",
+    "mediumSpringGreen",
+    "mediumTurquoise",
+    "salmon",
+    "pink",
+    "peahcPuff",
+    "mistyRose",
+    "coral",
+    "antiqueWhite",
+    "bique",
+    "blanchedAlmond",
+    "lemonChiffon",
+    "navajoWhite",
+    "cadetBlue",
+    "darkSlateGray",
+    "steelBlue",
+    "teal",
+    "crimson",
+    "darkRed",
+    "fireBrick",
+    "indianRed",
+    "maroon",
+    "yellowGreen",
+    "springGreen",
+    "chartreuse",
+    "lime",
+    "lawnGreen",
+    "blueViolet",
+    "darkOrchid",
+    "darkViolet",
+    "mediumPurple",
+    "rebeccaPurple",
+    "deepPink",
+    "fuchsia",
+    "hotPink",
+    "magenta",
+    "violet",
+    "yellow",
+    "gold",
+    "goldenRod",
+    "khaki",
+    "papayaWhip",
+    "orangeRed",
+    "darkSalmon",
+    "orange",
+    "tomato",
+    "thistle",
+    "plum",
+    "lghtPink",
+    "paleVioletRed",
+    "orchid",
+    "silver",
+    "lightSteelBlue",
+    "lightGrey",
+    "lavender",
+    "gainsboro",
+    "blue",
+    "darkBlue",
+    "indigo",
+    "navy",
+    "midnightBlue",
+    "wheat",
+    "tan",
+    "sandyBrown",
+    "rosyBrown",
+    "peru",
+    "brown",
+    "chocolate",
+    "saddleBrown",
+    "sienna",
+    "honeyDew",
+    "ivory",
+    "lavenderBlush",
+    "linen",
+    "mintCream",
+    "slateBlue",
+    "royalBlue",
+    "dodgerBlue",
+    "cornflowerBlue",
+    "gray",
+    "darkGray",
+    "dimGray",
+    "slateGray"
+      ];
+
+var squares = document.querySelectorAll(".square");
+var pickedColor = colors[Math.floor(Math.random()*colors.length)];
+var colorDisplay = document.getElementById("colorDisplay");
+
+colorDisplay.textContent = pickedColor;
+
+
+
 
 });
