@@ -1,2 +1,2 @@
-# the-great-rgb
-RGB colors guessing game
+# HTML Color Game
+HTML colors guessing game
