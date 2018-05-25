@@ -7,11 +7,7 @@
 
 .modal-content {
   background-color: tomato;
-  color: lemonchiffon;
-}
-
-.tomato {
-  color: tomato;
+  color: white;
 }
 
 h1, h2, h3, h4 {
@@ -19,7 +15,7 @@ h1, h2, h3, h4 {
 }
 
 header {
-  background-color: lemonchiffon;
+  background-color: white;
   padding-top: 2em;
   padding-bottom: 2em;
   color: black;
@@ -30,7 +26,8 @@ header h1 {
 }
 
 nav {
-  background-color: white;
+  background-color: black;
+  color: white;
   padding-top: .5em;
   padding-bottom: .5em;
 }
@@ -40,6 +37,8 @@ body {
 }
 
 footer {
+  background-color: black;
+  color: white;
   padding-top: .5em;
   padding-bottom: .5em;
 }
@@ -48,7 +47,15 @@ footer p {
   padding-top: .25em;
 }
 
-#mode h5{
+#colorDisplay {
+  font-family: 'Bitter', serif;
+}
+
+#mode h5 {
+  padding-right: .5em;
+}
+
+#scores h5 {
   padding-right: .5em;
 }
 

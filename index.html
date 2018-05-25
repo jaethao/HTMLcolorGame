@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet">
 
     <title>HTML Color Game</title>
   </head>
   <body>
     <header>
       <div class="container">
-        <h2 class="text-center tomato">Guess that HTML color name!</h2>
+        <h2 class="text-center">Guess that HTML color name!</h2>
         <h1 class="text-center"><em id="colorDisplay">navy</em></h1>
       </div>
     </header>
@@ -54,8 +55,12 @@
           <div class="col-sm-3">
             <h5 id="restart">Restart</h5>
           </div>
-          <div class="col-sm-3">
-            <h5 id="time">Time: 30</h5>
+          <div class="col-sm-3" id="scores">
+            <div class="row">
+            <div class="col-xs-4"><h5 id="win">Wins: 0</h5></div>
+            <div class="col-xs-4"><h5 id="win">|</h5></div>
+            <div class="col-xs-4"><h5 id="loss">losses: 0</h5></div>
+            </div>
           </div>
         <div class="col-sm-3">
           <div class="row" id="mode">
@@ -81,7 +86,7 @@
       </div>
 
     <footer>
-      <p class="text-center">Maiyer Thao  2018</p>
+      <p class="text-center">Maiyer Thao &copy; 2018</p>
     </footer>
 
 

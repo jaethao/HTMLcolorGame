@@ -9,7 +9,6 @@ $(document).ready(function(){
   //variables to store wins, losses, and time
   var wins = 0;
   var losses = 0;
-  var time = 30;
 
 //colors stored in an array
   var colors = [
@@ -134,6 +133,8 @@ squares[i].addEventListener("click", function(){
 
   //grab color of click square and compare to pickedColor
   var clickedColor = this.style.backgroundColor;
+
+  var header = document.getElementsByTagName('header');
 
   //compare color to pickedColor
   if(clickedColor === pickedColor){
