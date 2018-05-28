@@ -9,99 +9,100 @@ $(document).ready(function(){
   //variables to store wins, losses, and time
   var wins = 0;
   var losses = 0;
+  var chances = 10;
 
 //colors stored in an array
   var colors = [
-    "aliceBlue",
+    "aliceblue",
     "azure",
     "cornsilk",
-    "floralWhite",
-    "ghostWhite",
+    "floralwhite",
+    "ghostwhite",
     "aquamarine",
     "cyan",
-    "lightSeaGreen",
-    "mediumSpringGreen",
-    "mediumTurquoise",
+    "lightseagreen",
+    "mediumspringgreen",
+    "mediumturquoise",
     "salmon",
     "pink",
-    "peahcPuff",
-    "mistyRose",
+    "peachpuff",
+    "mistyrose",
     "coral",
-    "antiqueWhite",
-    "bique",
-    "blanchedAlmond",
-    "lemonChiffon",
+    "antiquewhite",
+    "bisque",
+    "blanchedalmond",
+    "lemonchiffon",
     "navajoWhite",
-    "cadetBlue",
-    "darkSlateGray",
-    "steelBlue",
+    "cadetblue",
+    "darkslategray",
+    "steelblue",
     "teal",
     "crimson",
-    "darkRed",
-    "fireBrick",
-    "indianRed",
+    "darkred",
+    "firebrick",
+    "indianred",
     "maroon",
-    "yellowGreen",
-    "springGreen",
+    "yellowgreen",
+    "springgreen",
     "chartreuse",
     "lime",
-    "lawnGreen",
-    "blueViolet",
-    "darkOrchid",
-    "darkViolet",
-    "mediumPurple",
-    "rebeccaPurple",
-    "deepPink",
+    "lawngreen",
+    "blueviolet",
+    "darkorchid",
+    "darkviolet",
+    "mediumpurple",
+    "rebeccapurple",
+    "deeppink",
     "fuchsia",
-    "hotPink",
+    "hotpink",
     "magenta",
     "violet",
     "yellow",
     "gold",
-    "goldenRod",
+    "goldenrod",
     "khaki",
-    "papayaWhip",
-    "orangeRed",
-    "darkSalmon",
+    "papayawhip",
+    "orangered",
+    "darksalmon",
     "orange",
     "tomato",
     "thistle",
     "plum",
-    "lghtPink",
-    "paleVioletRed",
+    "lightpink",
+    "palevioletred",
     "orchid",
     "silver",
-    "lightSteelBlue",
-    "lightGrey",
+    "lightsteelblue",
+    "lightgrey",
     "lavender",
     "gainsboro",
     "blue",
-    "darkBlue",
+    "darkblue",
     "indigo",
     "navy",
-    "midnightBlue",
+    "midnightblue",
     "wheat",
     "tan",
-    "sandyBrown",
-    "rosyBrown",
+    "sandybrown",
+    "rosybrown",
     "peru",
     "brown",
     "chocolate",
-    "saddleBrown",
+    "saddlebrown",
     "sienna",
-    "honeyDew",
+    "honeydew",
     "ivory",
-    "lavenderBlush",
+    "lavenderblush",
     "linen",
-    "mintCream",
-    "slateBlue",
-    "royalBlue",
-    "dodgerBlue",
-    "cornflowerBlue",
+    "mintcream",
+    "slateblue",
+    "royalblue",
+    "dodgerblue",
+    "cornflowerblue",
     "gray",
-    "darkGray",
-    "dimGray",
-    "slateGray"
+    "darkgray",
+    "dimgray",
+    "slategray"
       ];
 
 //select all the square class
@@ -117,6 +118,8 @@ randColors[randColors.length] = colors.splice(Math.floor(Math.random() * colors.
 //pick a random color from the randColors array
 var pickedColor = randColors[Math.floor(Math.random()*randColors.length)];
 
+console.log(pickedColor);
+
 //store the random color to the colorDisplay div
 var colorDisplay = document.getElementById("colorDisplay");
 
@@ -124,7 +127,7 @@ var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
 
 //loop thru the colors and squares
-for(var i = 0; i < squares.length; i++){
+  for(var i = 0; i < squares.length; i++){
 //add four randColors to the squares
 squares[i].style.backgroundColor = randColors[i];
 
@@ -133,16 +136,31 @@ squares[i].addEventListener("click", function(){
 
   //grab color of click square and compare to pickedColor
   var clickedColor = this.style.backgroundColor;
+  console.log(clickedColor);
 
-  var header = document.getElementsByTagName('header');
+  this.addClass("fadeOut");
+
+  var header = $("header");
 
   //compare color to pickedColor
   if(clickedColor === pickedColor){
     alert("Correct!");
+    header.css("background-color", pickedColor);
+    wins++;
+    chances--;
+    $("#wins").text("Wins: " + wins);
   }  else {
     alert("Wrong!!!");
+    header.css("background-color", pickedColor);
+    losses++;
+    chances--;
+    $("#losses").text("Losses: " + losses);
   }
+
 });
 };
+
+
+
 
 });
