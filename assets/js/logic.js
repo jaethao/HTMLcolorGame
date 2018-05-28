@@ -109,7 +109,7 @@ $(document).ready(function(){
 var squares = document.querySelectorAll(".square");
 
 //pick four rand colors from the array
-//while loop to pick four random colors from the colors array
+//while loop to pick four random colors from the colors array to display on the 4 squares
 var randColors = [];
 do {
 randColors[randColors.length] = colors.splice(Math.floor(Math.random() * colors.length) , 1)[0];
@@ -131,14 +131,14 @@ colorDisplay.textContent = pickedColor;
 //add four randColors to the squares
 squares[i].style.backgroundColor = randColors[i];
 
-//add click listeners to colorSquares
+//add click listener function to colorSquares
 squares[i].addEventListener("click", function(){
 
   //grab color of click square and compare to pickedColor
   var clickedColor = this.style.backgroundColor;
   console.log(clickedColor);
 
-  this.addClass("fadeOut");
+  // this.addClass("fadeOut");
 
   var header = $("header");
 
@@ -159,8 +159,5 @@ squares[i].addEventListener("click", function(){
 
 });
 };
-
-
-
 
 });
