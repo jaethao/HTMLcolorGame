@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 .square {
-  min-height: 600px;
+  width: none;
+  height: 700px;
 }
 
 .modal-content {
@@ -33,6 +34,7 @@ nav {
 
 body {
   background-color: white;
+  width: none;
 }
 
 footer {
@@ -54,7 +56,7 @@ footer p {
   padding-right: .5em;
 }
 
-#scores h5 {
+#navbar h5 {
   padding-right: .5em;
 }
 
@@ -64,4 +66,8 @@ footer p {
 
 #rulesNav:hover, #restart:hover, #easyMode:hover, #hardMode:hover {
   color: tomato;
+}
+
+#game {
+  width: auto;
 }

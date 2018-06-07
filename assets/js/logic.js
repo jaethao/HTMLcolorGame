@@ -1,15 +1,11 @@
 $(document).ready(function(){
 
-  //restart button refresh page
+  //restart button refresh page and load new colors
   $("#restart").click(function() {
     location.reload();
   });
 
   //game logic
-  //variables to store wins, losses, and time
-  var wins = 0;
-  var losses = 0;
-  var chances = 10;
 
 //colors stored in an array
   var colors = [
@@ -32,7 +28,7 @@ $(document).ready(function(){
     "bisque",
     "blanchedalmond",
     "lemonchiffon",
-    "navajoWhite",
+    "navajowhite",
     "cadetblue",
     "darkslategray",
     "steelblue",
@@ -113,7 +109,7 @@ var squares = document.querySelectorAll(".square");
 var randColors = [];
 do {
 randColors[randColors.length] = colors.splice(Math.floor(Math.random() * colors.length) , 1)[0];
-} while (randColors.length < 4);
+} while (randColors.length < 6 );
 
 //pick a random color from the randColors array
 var pickedColor = randColors[Math.floor(Math.random()*randColors.length)];
@@ -138,23 +134,15 @@ squares[i].addEventListener("click", function(){
   var clickedColor = this.style.backgroundColor;
   console.log(clickedColor);
 
-  // this.addClass("fadeOut");
-
   var header = $("header");
 
   //compare color to pickedColor
   if(clickedColor === pickedColor){
-    alert("Correct!");
     header.css("background-color", pickedColor);
-    wins++;
-    chances--;
-    $("#wins").text("Wins: " + wins);
+    $("#message").text("Good Job!");
   }  else {
-    alert("Wrong!!!");
-    header.css("background-color", pickedColor);
-    losses++;
-    chances--;
-    $("#losses").text("Losses: " + losses);
+    $("#message").text("Try again!");
+    this.style.backgroundColor = "white";
   }
 
 });
