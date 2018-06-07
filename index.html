@@ -24,9 +24,13 @@
     </header>
     <nav>
       <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <h5 data-toggle="modal" data-target="#rules" id="rulesNav">Rules</h5>
+        <div class="row" id="navbar">
+          <div class="col-sm-6">
+            <div class="row">
+            <h5 data-toggle="modal" data-target="#rules" id="rulesNav" class="col-xs-4">Rules</h5>
+            <h5 class="col-xs-4">|</h5>
+            <h5 class="col-xs-4" id="restart">New Colors</h5>
+          </div>
           </div>
           <!-- rules modal -->
           <div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -40,28 +44,20 @@
                 </div>
                 <div class="modal-body">
                   All modern browsers support 140 HTML color names. Are you familiar with them? Can you name them? Play this HTML
-                  Color Game and learn them.
+                  Color Game and learn them all.
                   <ol>
                     <br>
                     How to Play:
                     <li>A name of a color with pop up in the header</li>
                     <li>Guess the color by clicking on a colored block below</li>
                   </ol>
-                  <br>
-                  Good luck!
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
-            <h5 id="restart">Restart</h5>
-          </div>
-          <div class="col-sm-4" id="scores">
-            <div class="row">
-            <div class="col-xs-4"><h5 id="wins">Wins: 0</h5></div>
-            <div class="col-xs-4"><h5>|</h5></div>
-            <div class="col-xs-4"><h5 id="losses">Losses: 0</h5></div>
-            </div>
+          <div class="col-sm-6">
+            <h5 id="message"></h5>
+
           </div>
         </div>
       </div>
