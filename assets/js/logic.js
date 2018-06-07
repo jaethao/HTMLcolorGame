@@ -140,6 +140,7 @@ squares[i].addEventListener("click", function(){
   if(clickedColor === pickedColor){
     header.css("background-color", pickedColor);
     $("#message").text("Good Job!");
+    $("#restart").text("Play again!");
     changeColors(clickedColor);
   }  else {
     $("#message").text("Try again!");
