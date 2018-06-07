@@ -140,12 +140,19 @@ squares[i].addEventListener("click", function(){
   if(clickedColor === pickedColor){
     header.css("background-color", pickedColor);
     $("#message").text("Good Job!");
+    changeColors(clickedColor);
   }  else {
     $("#message").text("Try again!");
     this.style.backgroundColor = "white";
   }
 
 });
+};
+
+function changeColors(color){
+  for(var i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = color;
+  }
 };
 
 });
