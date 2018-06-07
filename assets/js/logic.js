@@ -32,7 +32,7 @@ $(document).ready(function(){
     "bisque",
     "blanchedalmond",
     "lemonchiffon",
-    "navajoWhite",
+    "navajowhite",
     "cadetblue",
     "darkslategray",
     "steelblue",
@@ -113,7 +113,7 @@ var squares = document.querySelectorAll(".square");
 var randColors = [];
 do {
 randColors[randColors.length] = colors.splice(Math.floor(Math.random() * colors.length) , 1)[0];
-} while (randColors.length < 4);
+} while (randColors.length < 6 );
 
 //pick a random color from the randColors array
 var pickedColor = randColors[Math.floor(Math.random()*randColors.length)];
@@ -138,7 +138,7 @@ squares[i].addEventListener("click", function(){
   var clickedColor = this.style.backgroundColor;
   console.log(clickedColor);
 
-  // this.addClass("fadeOut");
+  // squares[i].addClass("fadeOut");
 
   var header = $("header");
 
