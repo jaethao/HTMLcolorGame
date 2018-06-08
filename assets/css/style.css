@@ -16,8 +16,8 @@ h1, h2, h3, h4 {
 
 header {
   background-color: white;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 4em;
+  padding-bottom: 4em;
   color: black;
 }
 
@@ -28,8 +28,8 @@ header h1 {
 nav {
   background-color: black;
   color: white;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 body {
