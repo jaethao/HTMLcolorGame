@@ -105,7 +105,7 @@ $(document).ready(function(){
 var squares = document.querySelectorAll(".square");
 
 //pick four rand colors from the array
-//while loop to pick four random colors from the colors array to display on the 4 squares
+//while loop to pick random colors from the colors array to display on the 6 squares
 var randColors = [];
 do {
 randColors[randColors.length] = colors.splice(Math.floor(Math.random() * colors.length) , 1)[0];
